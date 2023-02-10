@@ -1,0 +1,272 @@
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     list-style: none;
+ }
+
+ html {
+     scroll-behavior: smooth;
+ }
+
+ @font-face {
+     font-family: 'Gilroy-Bold';
+     src: url("../fonts/Gilroy-Bold.ttf");
+ }
+
+ .header {
+     width: 100%;
+     z-index: 2;
+     transition: 0.5s all ease-in-out;
+     position: fixed;
+     top: 0;
+     height: 100px;
+     padding-top: 1rem;
+ }
+
+ .logoDiv {
+     width: 10%;
+ }
+
+ .logoImg {
+     width: 50px;
+     height: 50px;
+     background-color: aliceblue;
+     border-radius: 50%;
+     margin-left: 30px;
+ }
+
+ .logoImg img {
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+ }
+
+ .bannerSection {
+     width: 100%;
+     height: 100vh;
+     position: absolute;
+ }
+
+ .linkDiv {
+     width: 80%;
+     padding: 10px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     font-family: 'Gilroy-Light';
+ }
+
+ .linkDiv a {
+     text-decoration: none;
+     margin: 0 10px;
+     color: #FFF;
+     align-items: center;
+     padding-left: 10px;
+     padding-right: 10px;
+     display: flex;
+     align-items: center;
+     font-family: "Gilroy-Bold";
+
+ }
+
+ .darkDiv {
+     width: 10%;
+ }
+
+ .darkDiv i {
+     color: #ffff;
+     padding-left: 40px;
+ }
+
+ .textDiv {
+     height: 700px;
+     display: flex;
+     justify-content: center;
+     flex-direction: column;
+     width: 90%;
+     margin: auto;
+ }
+
+ .textDiv h3 {
+     color: #fff;
+     font-family: "Gilroy-Bold";
+     text-transform: uppercase;
+     z-index: 1;
+ }
+
+ .textDiv h1 {
+     color: #fff;
+     font-family: "Gilroy-Bold";
+     text-transform: uppercase;
+     font-size: 120px;
+     z-index: 1;
+
+ }
+
+ .textDiv p {
+     margin: 0px 0px 40px 0px;
+     font-size: 20px;
+     font-weight: 400;
+     line-height: 32px;
+     color: #FFFFFFB0;
+     font-family: "Gilroy-Bold";
+     z-index: 1;
+ }
+
+ .BtnDiv {
+     z-index: 1;
+ }
+
+ .btnCstm {
+     background-color: transparent;
+     border: none;
+     padding: 10px 20px;
+     color: #FFF;
+     font-size: 20px;
+     font-family: "Gilroy-Bold";
+
+ }
+
+ @import url('https://fonts.googleapis.com/css?family=Titillium+Web:400,600,700,900&display=swap');
+
+ :root {
+     --font-family: 'Titillium Web', sans-serif;
+     --black-bg: #313434;
+     --white-bg: #ffffff;
+     --red-bg: #f03a37;
+ }
+
+ .parallax-slider {
+     font-family: var(--font-family);
+ }
+
+ .parallax-slider .swiper-slide {
+     position: relative;
+     overflow: hidden;
+ }
+
+ .parallax-slider .img-container {
+     position: absolute;
+     top: 0;
+     bottom: 0;
+     left: 0;
+     right: 0;
+     margin: auto;
+     background-position: center;
+     background-size: cover;
+ }
+
+ .parallax-slider .img-container::after {
+     content: '';
+     position: absolute;
+     top: 0;
+     bottom: 0;
+     left: 0;
+     right: 0;
+     margin: auto;
+     /* background-image: linear-gradient(rgba(8, 8, 8, 0.5), rgba(218, 15, 45, 0.5)); */
+ }
+
+ .parallax-slider .swiper-slide .content {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     height: 100%;
+     padding-top: 15rem;
+     padding-bottom: 15rem;
+ }
+
+ .parallax-slider .content {
+     color: var(--white-bg);
+     text-align: center;
+ }
+
+ .parallax-slider .content .title {
+     font-weight: 900;
+     text-transform: uppercase;
+     font-size: 3.5rem;
+ }
+
+ .parallax-slider .content .title .title-wrapper {
+     text-decoration: underline;
+     display: inline-flex;
+     padding: 0.1rem 2rem;
+ }
+
+ .parallax-slider .content .description {
+     font-weight: 600;
+     font-size: 1.2rem;
+     margin-top: 1rem;
+     margin-bottom: 1rem;
+ }
+
+ /*nav controls*/
+ .parallax-slider .swiper-nav-ctrl {
+     background-image: none;
+     backdrop-filter: blur(20px);
+     width: 80px;
+     height: 80px;
+     border-radius: 50%;
+     top: 0;
+     bottom: 0;
+     margin: auto;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     font-size: 1rem;
+     background-color: #FFFFFF00;
+     color: #fff;
+ }
+
+ .parallax-slider .swiper-nav-ctrl:hover {
+     cursor: pointer;
+     background-color: #0000001a;
+     color: #fff;
+
+ }
+
+ .parallax-slider .swiper-nav-ctrl.next-ctrl {
+     /* right: 0; */
+     right: 120px;
+     top: 490px;
+ }
+
+ .parallax-slider .swiper-nav-ctrl.prev-ctrl {
+     /* left: 0; */
+     left: 120px;
+     top: 490px;
+ }
+
+ .parallax-slider .pagination-ctrl {
+     max-width: calc(100% - 60px);
+     left: 0;
+     right: 0;
+     margin: auto;
+ }
+
+ .parallax-slider .pagination-ctrl .swiper-pagination-bullet {
+     background-color: var(--white);
+     color: #0000;
+ }
+
+ .parallax-slider .img-container.one {
+     background-image: url('../imges/image1.jpg');
+ }
+
+ .parallax-slider .img-container.two {
+     background-image: url('../imges/image2.jpg');
+ }
+
+ .parallax-slider .img-container.three {
+     background-image: url('../imges/image1.jpg');
+ }
+
+ .ms-cont__inner {
+     width: 100%;
+     height: 100vh;
+ }
+ @media only screen and (max-width:414px) {
+   
+ }

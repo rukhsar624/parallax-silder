@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Custom Css -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <!-- Bootstrap Css-->
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <!-- swiper slider -->
+    <link rel="stylesheet" href="./assets/css/swiper-bundle.css">
+    <!-- fontawesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <title>Home</title>
+</head>
+<style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+@font-face {
+    font-family: 'Gilroy-Bold';
+    src: url("../fonts/Gilroy-Bold.ttf");
+}
+
+.header {
+    width: 100%;
+    z-index: 2;
+    transition: 0.5s all ease-in-out;
+    position: fixed;
+    top: 0;
+    height: 100px;
+    padding-top: 1rem;
+}
+
+.logoDiv {
+    width: 10%;
+}
+
+.logoImg {
+    width: 50px;
+    height: 50px;
+    background-color: aliceblue;
+    border-radius: 50%;
+}
+
+.logoImg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.bannerSection {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+}
+
+.linkDiv {
+    width: 80%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Gilroy-Light';
+}
+
+.linkDiv a {
+    text-decoration: none;
+    margin: 0 10px;
+    color: #FFF;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex;
+    align-items: center;
+    font-family: "Gilroy-Bold";
+
+}
+
+.darkDiv {
+    width: 10%;
+}
+
+.darkDiv i {
+    color: #ffff;
+    padding-left: 40px;
+}
+
+.textDiv {
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 90%;
+    margin: auto;
+}
+
+.textDiv h3 {
+    color: #fff;
+    font-family: "Gilroy-Bold";
+    text-transform: uppercase;
+}
+
+.textDiv h1 {
+    color: #fff;
+    font-family: "Gilroy-Bold";
+    text-transform: uppercase;
+    font-size: 120px;
+
+}
+
+.textDiv p {
+    margin: 0px 0px 40px 0px;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 32px;
+    color: #FFFFFFB0;
+    font-family: "Gilroy-Bold";
+}
+
+.card1 {
+    background-image: url("./assets/imges/image1.jpg");
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+}
+
+.card2 {
+    background-image: url("./assets/imges/image2.jpg");
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+}
+
+.card3 {
+    background-image: url("./assets/imges/image1.jpg");
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+}
+
+.card4 {
+    background-image: url("./assets/imges/image2.jpg");
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+}
+
+.btnCstm {
+    background-color: transparent;
+    border: none;
+    padding: 10px 20px;
+    color: #FFF;
+    font-size: 20px;
+    font-family: "Gilroy-Bold";
+
+}
+
+.leftCustmPag {
+    position: absolute;
+    content: "";
+    left: 90px;
+    bottom: 100px;
+    backdrop-filter: blur(20px);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFF;
+    font-size: 30px;
+    background-color: #FFFFFF00;
+}
+
+.leftCustmPag:hover {
+    cursor: pointer;
+    background-color: #0000001a;
+
+}
+
+.swiperPig {
+    position: absolute;
+    content: "";
+    right: 645px;
+    bottom: 100px;
+    backdrop-filter: blur(20px);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFF;
+    font-size: 30px;
+    background-color: #ffff;
+
+}
+
+.rightCustmpag {
+    position: absolute;
+    content: "";
+    right: 90px;
+    bottom: 100px;
+    backdrop-filter: blur(20px);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFF;
+    font-size: 30px;
+    background-color: #FFFFFF00;
+}
+
+.rightCustmpag:hover {
+    cursor: pointer;
+    background-color: #0000001a;
+
+}
+
+.swiper-wrapper {
+    display: flex;
+    transition: transform .8s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
+}
+
+.swiper-scrollbar {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 10px;
+    background: rgba(0, 0, 0, .1);
+}
+
+.swiper-scrollbar-drag {
+    height: 100%;
+    transition: transform .8s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
+    background: rgba(0, 0, 0, .4);
+
+}
+
+#padding {
+    padding: 0px;
+} 
+</style>
+<body>
+   <!-- Header Open -->
+   <Header class="header">
+    <div class="container">
+        <div class="row">
+            <nav>
+                <div class="d-flex justify-content-between align-items-center">
+                    <div class="logoDiv">
+                        <div class="logoImg">
+                            <img src="./assets/imges/most_logo2_light.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="linkDiv">
+                        <div class="d-flex justify-content-center">
+                            <a href="">Home</a>
+                            <a href="">Story</a>
+                            <a href="">Works</a>
+                            <a href="">Pages</a>
+                            <a href="">Contact</a>
+                            <a href="">Shop</a>
+                        </div>
+                    </div>
+                    <div class="darkDiv">
+                        <div class="d-flex justify-content-end align-items-center">
+                            <div><i class="fa-solid fa-sun"></i></div>
+                            <div><i class="fa-solid fa-magnifying-glass"></i></div>
+                        </div>
+                    </div>
+
+                </div>
+            </nav>
+        </div>
+    </div>
+</Header> 
+<!-- Header Close -->
+<!-- Bannaer Open-->
+ <section class="bannerSection swiper mySwiper parallax-slider">
+    <div class="container-fluid swiper-wrapper bannerSection">
+        <div class="row swiper-slide">
+
+            <div class="col-lg-12" id="padding">
+                <div class="card1">
+                    <div class="textDiv">
+                        <h3>Our Vision</h3>
+                        <h1>Design</h1>
+                        <p>Credibly leverage existing business experiences through<br> magnetic
+                            mindshare. Synergistically exploit <br> efficient partnerships world-class applications.
+                        </p>
+                        <div>
+                            <a href="">
+                                <button class="btnCstm">Take A Look</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row swiper-slide">
+            <div class="col-lg-12" id="padding">
+                <div class="card2">
+                    <div class="textDiv">
+                        <h3>inspiration</h3>
+                        <h1>Motion</h1>
+                        <p>Conveniently formulate progressive users for error-free<br> interfaces. Monotonectally
+                            deploy superior <br>relationships without seamless infomediaries. </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row swiper-slide">
+            <div class="col-lg-12" id="padding">
+                <div class="card3">
+                    <div class="textDiv">
+                        <h1>engine</h1>
+                        <p>Authoritatively mesh robust web services and web-enabled ROI. <br>Globally communicate
+                            extensible e-services <br>rather than backend users.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row swiper-slide">
+            <div class="col-lg-12" id="padding">
+                <div class="card4">
+                    <div class="textDiv">
+                        <h3>inspiration</h3>
+                        <h1>Motion</h1>
+                        <p>Conveniently formulate progressive users for error-free<br> interfaces. Monotonectally
+                            deploy superior <br>relationships without seamless infomediaries. </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="container">
+    <div class="row">
+        <div class="d-flex justify-content-between align-items-center">
+            <div class="">
+                <div class="leftCustmPag"><i class="fa-solid fa-arrow-left"></i></div>
+            </div>
+            <div class="swiperPig">
+                <div class="swiper-pagination"></div>
+            </div>
+            <div class="">
+                <div class="rightCustmpag"><i class="fa-solid fa-arrow-right"></i></div>
+            </div>
+        </div>
+    </div>
+</div> 
+<!-- Banner Close --> 
+<!-- Jquery -->
+<script src="./assets/js/jquery.min.js"></script>
+<!-- Bootstrap Js -->
+<script src="./assets/js/bootstrap.bundle.min.js"></script>
+<!-- swiper slider -->
+<script src="./assets/js/swiper-bundle.min.js"></script>
+<!-- Custom Js -->
+<script src="./assets/js/main.js"></script>
+<script src="javaScript">
+    var swiper = new Swiper(".mySwiper", {
+  slidesPerView: 3,
+  spaceBetween: 30,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  freeMode: {
+    enabled: true,
+    sticky: false,
+    momentumBounce: false,
+  },
+  scrollbar: {
+    el: '.swiper-scrollbar',
+    draggable: true,
+    dragSize: 100,
+  },
+  mousewheel: {
+    enabled: true,
+    sensitivity: 5.5,
+    parallax: true,
+    speed: 2000,
+  },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  breakpoints: {
+    768: {
+      slidesPerView: 1,
+      spaceBetween: 20
+    },
+    375: {
+      slidesPerView: 1,
+      spaceBetween: 20
+    },
+    1920: {
+      slidesPerView: 1,
+      spaceBetween: 20
+    },
+    1600: {
+      slidesPerView: 1,
+      spaceBetween: 20
+
+    },
+    1400: {
+      slidesPerView: 1,
+      spaceBetween: 20
+    }
+  }
+
+});
+</script>
+</body>
+
+</html>
