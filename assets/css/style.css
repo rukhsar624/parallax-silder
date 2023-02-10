@@ -165,7 +165,6 @@
      left: 0;
      right: 0;
      margin: auto;
-     /* background-image: linear-gradient(rgba(8, 8, 8, 0.5), rgba(218, 15, 45, 0.5)); */
  }
 
  .parallax-slider .swiper-slide .content {
@@ -241,14 +240,19 @@
 
  .parallax-slider .pagination-ctrl {
      max-width: calc(100% - 60px);
-     left: 0;
+     max-width: calc(100% - 900px);
+     /* left: 0; */
+     bottom: 100px;
      right: 0;
      margin: auto;
+     background-color: #f03a37;
+     opacity: 0.7;
  }
 
  .parallax-slider .pagination-ctrl .swiper-pagination-bullet {
-     background-color: var(--white);
+     /* background-color: var(--white); */
      color: #0000;
+     background-color: black;
  }
 
  .parallax-slider .img-container.one {
