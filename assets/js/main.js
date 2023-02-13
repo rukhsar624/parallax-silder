@@ -10,6 +10,7 @@ $(document).ready(function () {
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
+      
     },
     mousewheel: {
       enabled: true,
@@ -53,6 +54,7 @@ $(document).ready(function () {
     parallaxSlider = new Swiper('.parallax-slider', parallaxSliderOptions);
   });
 });
+// Light and Dark Mode
 
 
 

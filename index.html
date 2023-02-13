@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
     <!-- swiper slider -->
     <link rel="stylesheet" href="./assets/css/swiper-bundle.css">
+    <!-- wow css -->
+    <link rel="stylesheet" href="./assets/css/wow.css">
     <!-- fontawesome cdn -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
     <title>Home</title>
@@ -19,7 +21,7 @@
 <body>
     <!-- Header Open -->
     <Header class="header">
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
                 <nav>
                     <div class="d-flex justify-content-between align-items-center">
@@ -30,8 +32,16 @@
                         </div>
                         <div class="linkDiv">
                             <div class="d-flex justify-content-center">
-                                <a href="">Home</a>
-                                <a href="">Story</a>
+                                <a href="" class="header_links active">Home</a>
+                                <div class="dropDown">
+                                     <a href="">Home Portfolio</a>
+                                     <a href="">Full Page Slider</a>
+                                     <a href="">Personal Portfolio</a>
+                                     <a href="">Personal CV</a>
+                                     <a href="">Creative Agency</a>
+                                     <a href="">Business & Corporate</a>
+                                </div>
+                                <a href="">Stories</a>
                                 <a href="">Works</a>
                                 <a href="">Pages</a>
                                 <a href="">Contact</a>
@@ -40,7 +50,9 @@
                         </div>
                         <div class="darkDiv">
                             <div class="d-flex justify-content-end align-items-center">
-                                <div><i class="fa-solid fa-sun"></i></div>
+                                <div>
+                                    <i class="fa-solid fa-sun"></i>
+                                </div>
                                 <div><i class="fa-solid fa-magnifying-glass"></i></div>
                             </div>
                         </div>
@@ -54,13 +66,13 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12 p-0">
-                <div class="swiper-container parallax-slider">
+                <div class="swiper-container parallax-slider h-100">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <div class="img-container one"></div>
                             <div class="container-fluid h-100">
                                 <div class="row h-100">
-                                    <div class="col-md-12">
+                                    <div class="col-md-12 col-lg-12">
                                         <div class="textDiv">
                                             <h3>Our Vision</h3>
                                             <h1>Design</h1>
@@ -104,16 +116,6 @@
                             <div class="container-fluid h-100">
                                 <div class="row h-100">
                                     <div class="col-md-12">
-                                        <!-- <div class="textDiv">
-                        <h1>engine</h1>
-                        <p>Authoritatively mesh robust web services and web-enabled ROI. <br>Globally communicate
-                            extensible e-services <br>rather than backend users.</p>
-                            <div class="BtnDiv">
-                                <a href="">
-                                    <button class="btnCstm">Take A Look</button>
-                                </a>
-                            </div>
-                    </div> -->
                                         <div class="slide-inner" data-swiper-parallax="70%"
                                             style="transform: translate3d(0%, 0px, 0px); transition-duration: 0ms;">
                                             <div class="ms-slider--video">
@@ -136,7 +138,8 @@
                                                         <h1>engine</h1>
                                                         <p>Authoritatively mesh robust web services and web-enabled ROI.
                                                             <br>Globally communicate
-                                                            extensible e-services <br>rather than backend users.</p>
+                                                            extensible e-services <br>rather than backend users.
+                                                        </p>
                                                         <div class="BtnDiv">
                                                             <a href="">
                                                                 <button class="btnCstm">Take A Look</button>
@@ -174,31 +177,27 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="swiper-pagination pagination-ctrl"></div>
                         
                     </div>
                     <!-- slider controls -->
                     <div class="swiper-button-next swiper-nav-ctrl next-ctrl">
-                        <!-- <i class="fas fa-chevron-right"></i> -->
-                        <!-- <i class="fa-solid fa-arrow-right"></i> -->
                     </div>
                     <div class="swiper-button-prev swiper-nav-ctrl prev-ctrl">
-                        <!-- <i class="fas fa-chevron-left"></i> -->
-                        <!-- <i class="fa-solid fa-arrow-left"></i> -->
                     </div>
                     <!-- pagination -->
-
+                    <div class="swiper-pagination pagination-ctrl"></div>
                 </div>
             </div>
         </div>
     </div>
-
     <!-- Jquery -->
     <script src="./assets/js/jquery.min.js"></script>
     <!-- Bootstrap Js -->
     <script src="./assets/js/bootstrap.bundle.min.js"></script>
     <!-- swiper slider -->
     <script src="./assets/js/swiper-bundle.min.js"></script>
+    <!-- wow js -->
+    <script src="./assets/js/wow.js"></script>
     <!-- Custom Js -->
     <script src="./assets/js/main.js"></script>
 </body>
