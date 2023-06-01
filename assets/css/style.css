@@ -360,6 +360,8 @@ html {
 }
 .cstmDivInner h4{
     /* padding-left: 30px; */
+    padding-bottom: 100px;
+    padding-top: 100px;
 
 }
 /* Portfolio Css */
